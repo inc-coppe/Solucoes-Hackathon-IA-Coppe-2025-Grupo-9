@@ -1,4 +1,4 @@
-# Projeto de Simulação: Ecossistema de Microsserviços para Regulação de Saúde (SUS Inteligente)
+# Ecossistema de Microsserviços para Regulação de Saúde (SUS Inteligente)
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue.svg)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.95-green.svg)
@@ -143,3 +143,4 @@ curl -X POST "http://localhost:8001/solicitacoes" \
 * Conectar a um frontend para criar uma interface visual para o sistema.
 * Substituir a lógica do agente por um modelo de Machine Learning treinado com dados reais.
 * Evoluir o `communication-service` para se conectar a um provedor real de SMS ou e-mail.
+
