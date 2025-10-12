@@ -1,0 +1,94 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:14-alpine
+    container_name: db_postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    env_file:
+      - ./.env
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U admin -d sus_hackathon_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - sus_network
+
+  auth_service:
+    container_name: auth_service
+    build: ./services/auth_service
+    ports:
+      - "8000:8000"
+    environment: 
+      - JWT_ALGORITHM=HS256
+    volumes:
+      - ./services/auth_service/src:/app/src
+    env_file:
+      - ./.env
+    networks:
+      - sus_network
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  regulation_service:
+    container_name: regulation_service
+    build: ./services/regulation_service
+    ports:
+      - "8001:8000"
+    environment: 
+      - JWT_ALGORITHM=HS256
+    volumes:
+      - ./services/regulation_service/src:/app/src
+    env_file:
+      - ./.env
+    networks:
+      - sus_network
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  review_service:
+    container_name: review_service
+    build: ./services/review_service
+    ports:
+      - "8002:8000"
+    environment: 
+      - JWT_ALGORITHM=HS256
+    volumes:
+      - ./services/review_service/src:/app/src
+    env_file:
+      - ./.env
+    networks:
+      - sus_network
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  communication_service:
+    container_name: communication_service
+    build: ./services/communication_service
+    ports:
+      - "8003:8000"
+    environment: 
+      - JWT_ALGORITHM=HS256
+    volumes:
+      - ./services/communication_service/src:/app/src
+    env_file:
+      - ./.env
+    networks:
+      - sus_network
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  postgres_data:
+
+networks:
+  sus_network:
+    driver: bridge

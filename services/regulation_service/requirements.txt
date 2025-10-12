@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+python-jose[cryptography]
+pandas
+faker
+sqlalchemy
+psycopg2-binary
+httpx

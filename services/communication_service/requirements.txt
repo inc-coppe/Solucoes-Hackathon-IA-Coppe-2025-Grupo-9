@@ -1,0 +1,4 @@
+# Em services/communication_service/requirements.txt
+fastapi
+uvicorn[standard]
+python-jose[cryptography]
