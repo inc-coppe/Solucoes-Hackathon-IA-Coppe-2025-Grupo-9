@@ -12,7 +12,7 @@
 [Júnior Goulart](https://www.linkedin.com/in/juniorgoulart/) - Desenvolvedor | engenheiro de IA & ML <br>
 [Marina Micas](https://www.linkedin.com/in/marinamicas/) - Gerente de projetos | UX/UI designer | especialista em IA & ML <br>
 [Ricardo Saint-Clair](https://www.linkedin.com/in/ricardosaintclair/) - Gerente de projetos | UX/UI designer | Dialogo | ECO UFRJ <br>
-[Vinícius Moreira]() - Desenvolvedor | ITA 
+[Vinícius Moreira](https://www.linkedin.com/in/viniciusmcampos/) - Desenvolvedor | ITA 
 
 
 
@@ -154,6 +154,7 @@ curl -X POST "http://localhost:8001/solicitacoes" \
 * Conectar a um frontend para criar uma interface visual para o sistema.
 * Substituir a lógica do agente por um modelo de Machine Learning treinado com dados reais.
 * Evoluir o `communication-service` para se conectar a um provedor real de SMS ou e-mail.
+
 
 
 
