@@ -5,6 +5,17 @@
 ![Docker](https://img.shields.io/badge/Docker-20.10-blue.svg)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14-blue.svg)
 
+## Integrantes do grupo 9 e seus respectivos linkedIn
+
+[Arthur Vianna](https://www.linkedin.com/in/arthursvianna/) - Desenvolvedor | ITA
+[Jéssica de Andrade](http://linkedin.com/in/jessicadeandrade27) - Especialista em saúde | COPPE/UFRJ
+[Júnior Goulart](https://www.linkedin.com/in/juniorgoulart/) - Desenvolvedor | engenheiro de IA & ML
+[Marina Micas](https://www.linkedin.com/in/marinamicas/) - Gerente de projetos | UX/UI designer | especialista em IA & ML
+[Ricardo Saint-Clair](https://www.linkedin.com/in/ricardosaintclair/) - Gerente de projetos | UX/UI designer | Dialogo | ECO UFRJ
+[Vinícius Moreira]() - Desenvolvedor | ITA 
+
+
+
 ## 📄 Visão Geral
 
 Este projeto simula um ecossistema completo de microsserviços para um sistema de regulação de saúde digital, inspirado nos desafios do SUS. A arquitetura foi projetada para ser modular, escalável e resiliente, demonstrando como diferentes responsabilidades (autenticação, regulação, comunicação, feedback) podem ser desacopladas em serviços independentes.
@@ -143,4 +154,5 @@ curl -X POST "http://localhost:8001/solicitacoes" \
 * Conectar a um frontend para criar uma interface visual para o sistema.
 * Substituir a lógica do agente por um modelo de Machine Learning treinado com dados reais.
 * Evoluir o `communication-service` para se conectar a um provedor real de SMS ou e-mail.
+
 
